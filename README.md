@@ -1,134 +1,108 @@
-# 📚 Studies — Interactive Learning Repository
+# 📚 Studies — Interactive Learning System
 
 ## 🚀 Overview
-This repository is an **interactive study system** designed to support continuous learning and public examination preparation through **HTML-based study tools**.
+This repository contains an interactive, browser-based study system designed to support continuous learning and preparation for public examinations.
 
-Instead of relying solely on static notes, this repository uses **browser-executable interfaces** (HTML + JS) to deliver a more active and structured learning experience.
+The system allows users to:
+- Import structured questions
+- Complete simulated quizzes
+- Track mistakes automatically
+- Reinforce knowledge through written (dissertative) answers
 
----
-
-## 🎯 Core Concept
-
-> **Learn by interacting, not just reading.**
-
-All study sessions are executed through:
-- Interactive HTML pages
-- Structured question flows
-- Immediate feedback mechanisms
+All functionality runs entirely in the browser using a single HTML application.
 
 ---
 
-## 🧩 Architecture
+## 🎯 Purpose
 
-This repository is organized into two main layers:
+The main objective of this project is to provide an efficient and structured learning workflow based on:
 
-### 1. Study Engine (Logic Layer)
-
-projects/
-└── study-tools/
-└── quiz-engine/
-├── index.html
-├── style.css
-└── script.js
-
-
-- Responsible for rendering questions
-- Handles interaction and feedback
-- Acts as the **core learning interface**
+- Active recall through quizzes
+- Immediate feedback
+- Error tracking (“error notebook”)
+- Written reinforcement of incorrect answers
 
 ---
 
-### 2. Study Content (Data Layer)
+## ⚙️ How It Works
 
-content/
-├── law/
-├── it/
-├── accounting/
-└── others/
+The system follows this cycle:
 
+1. **Import Questions**
+   - Paste questions using a structured format
+   - The system parses and stores them by discipline
 
-- Organized by subject/domain
-- Contains structured questions and study material
-- Designed to be consumed by the study engine
+2. **Run Simulations**
+   - Answer questions in quiz mode
+   - Receive immediate correction after submission
+
+3. **Track Errors**
+   - Incorrect answers are automatically stored
+   - Each error includes the correct answer and explanation
+
+4. **Reinforce Learning**
+   - Answer incorrectly answered questions again
+   - Write explanations in your own words to improve retention
 
 ---
 
-## 🗂️ Full Repository Structure
+## 🧩 Features
+
+- Multi-discipline support
+- Custom question import (structured text format)
+- Quiz engine with pagination
+- Automatic error tracking
+- Dissertative answer system (error notebook)
+- Local data persistence using browser storage
+- Search and filtering within error notebook
+
+---
+
+## 🗂️ Repository Structure
 
 
-Studies/
+studies/
 │
-├── projects/ # Interactive study tools (HTML-based)
-│ └── study-tools/
-│ └── quiz-engine/
+├── docs/
+│ └── index.html # Main application (deployed via GitHub Pages)
 │
-├── content/ # Structured study content (questions, topics)
-│ ├── law/
-│ ├── it/
-│ └── accounting/
+├── projects/ # Experimental or future improvements
 │
-├── notes/ # Complementary summaries and annotations
-├── resources/ # External references and materials
 └── README.md
 
 
 ---
 
-## 🧠 Study Methodology
+## 🌐 Deployment
 
-This system follows a **practical and iterative learning loop**:
+This project is deployed using **GitHub Pages**.
 
-1. **Load Content** → Select subject/topic  
-2. **Execute HTML Tool** → Interact with questions  
-3. **Immediate Feedback** → Validate understanding  
-4. **Error Analysis** → Identify weak points  
-5. **Reinforcement** → Repeat with variation  
+After deployment, the application can be accessed directly in the browser:
 
----
 
-## ⚙️ Design Principles
+https://your-username.github.io/studies/
 
-- **Separation of Concerns**
-  - Content ≠ Interface
-- **Scalability**
-  - One engine, multiple subjects
-- **Consistency**
-  - Standardized HTML structure
-- **Reusability**
-  - Modular components
-- **Simplicity First**
-  - Avoid premature complexity
 
 ---
 
-## 🔮 Roadmap
+## ⚠️ Data Persistence
 
-- [ ] Standardize question format (JSON/Markdown)
-- [ ] Integrate LLM-generated question pipelines
-- [ ] Add exam simulation mode (CEBRASPE-style)
-- [ ] Implement scoring and performance tracking
-- [ ] Create reusable HTML templates
-- [ ] Add tagging and filtering system
+All data is stored locally in the browser using `localStorage`.
 
----
-
-## 📌 Usage
-
-1. Navigate to the study tool:
-
-projects/study-tools/quiz-engine/index.html
-
-2. Open in your browser
-3. Load or connect your study content
-4. Start practicing
+Important implications:
+- Data is **not shared across devices**
+- Clearing browser data will erase your progress
+- It is recommended to implement backup/export in future versions
 
 ---
 
-## ⚠️ Important Notes
+## 🔮 Future Improvements
 
-- HTML files are the **primary interface for study**
-- Content should remain **structured and reusable**
-- Avoid mixing logic and data in the same file
+- Data export/import (JSON backup)
+- Cloud synchronization (multi-device access)
+- Standardized question format (JSON-based)
+- Integration with LLMs for automatic question generation
+- Performance tracking and analytics
 
 ---
 
@@ -140,4 +114,4 @@ Fabio Everton
 
 ## 📄 License
 
-This repository is intended for **personal and educational use**.
+This project is intended for personal and educational use.
